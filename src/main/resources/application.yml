@@ -1,0 +1,43 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: minio-demo
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: aa168240
+    url: jdbc:mysql://localhost:3306/fileinfo?useSSL=true&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+ 
+
+#请把下面的配置换成自己的服务器
+# minio:
+#   endpoint: http://129.28.158.207:9000
+#   accessKey: admin
+#   secretKey: 12345678
+#   filHost: http://file.songshijun.top
+
+#请把下面的配置换成自己的服务器
+minio:
+  endpoint: https://play.min.io
+  accessKey: Q3AM3UQ867SPQQA43P2F
+  secretKey: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG
+  filHost: http://file.songshijun.top
+
+logging:
+  level:
+    ROOT: INFO
+    com.minio: DEBUG
+  pattern:
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{50} - %msg%n'
+  file:
+    name: ${logging.file.path}/${spring.application.name}.log
+    path: /home/logs/${spring.application.name}
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 30
+

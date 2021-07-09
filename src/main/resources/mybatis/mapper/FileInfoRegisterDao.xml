@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.minio.dao.FileInfoRegisterDao">
+
+    <resultMap type="com.minio.entity.FileInfoRegisterEntity" id="fileInfoRegisterMap">
+        <result property="id" column="id"/>
+        <result property="originalFileName" column="original_file_name"/>
+        <result property="newFileName" column="new_file_name"/>
+        <result property="filePath" column="file_path"/>
+        <result property="moduleCode" column="module_code"/>
+        <result property="uploadOperator" column="upload_operator"/>
+        <result property="downloadOperator" column="download_operator"/>
+        <result property="fileSize" column="file_size"/>
+        <result property="fileType" column="file_type"/>
+        <result property="uploadTime" column="upload_time"/>
+        <result property="downloadTime" column="download_time"/>
+        <result property="deleteTime" column="delete_time"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+
+</mapper>
